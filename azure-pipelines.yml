@@ -18,7 +18,7 @@ steps:
 - task: Docker@2
   inputs:
     buildContext: '$(Build.Repository.LocalPath)'
-    containerRegistry: 'DockerHdO'
+    containerRegistry: 'DockerHubHdO'
     repository: 'brunobrasolin/HdO'
     command: 'buildAndPush'
     tags: |
