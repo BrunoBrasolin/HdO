@@ -10,11 +10,12 @@ pool:
   name : Bruno Brasolin
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  dockerToken: ''
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: docker login -u brunobrasolin -p $(dockerToken)
 - task: Docker@2
   inputs:
     buildContext: '$(Build.Repository.LocalPath)'
