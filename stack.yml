@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   hdo:
-    image: brunobrasolin/HdO
+    image: brunobrasolin/hdo
     ports:
       - 54991:80
       - 54992:443
