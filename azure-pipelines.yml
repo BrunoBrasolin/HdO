@@ -9,13 +9,11 @@ trigger:
 pool:
   name : Bruno Brasolin
 
-variables:
-  dockerToken: 'dckr_pat_bRxfs9VsRqGFuzER_4XRRGywmH0'
-
 steps:
-- task: CmdLine@2
+- task: Docker@2
   inputs:
-    script: docker login -u brunobrasolin -p $(dockerToken)
+    containerRegistry: 'DockerHdO'
+    command: 'login'
 - task: Docker@2
   inputs:
     buildContext: '$(Build.Repository.LocalPath)'
