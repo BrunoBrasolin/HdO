@@ -4,8 +4,8 @@ services:
   hdo:
     image: brunobrasolin/HdO
     ports:
-      - 54981:80
-      - 54982:443
+      - 54991:80
+      - 54992:443
     networks:
         - t2s
 networks:
