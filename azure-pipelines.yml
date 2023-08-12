@@ -10,7 +10,7 @@ pool:
   name : Bruno Brasolin
 
 variables:
-  dockerToken: ''
+  dockerToken: 'dckr_pat_bRxfs9VsRqGFuzER_4XRRGywmH0'
 
 steps:
 - task: CmdLine@2
