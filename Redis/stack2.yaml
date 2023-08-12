@@ -1,0 +1,18 @@
+version: "3.0"
+services:         
+    redis2:
+        image: redis:alpine
+        command: redis-server --save 20 1 --loglevel warning --requirepass t2sSenha
+        volumes:
+            - redis_data:/data
+        ports:
+            - "6379:6379"
+        networks:
+            - t2s
+
+networks:
+    t2s:
+        external: true
+
+volumes:
+  redis_data:
